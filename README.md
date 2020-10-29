@@ -4,49 +4,40 @@
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| name     | string | null: false |
+| nickname | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
 
 ### Association
 
-- has_many :room_users
-- has_many :rooms, through: room_users
-- has_many :messages
+- has_many :posts
+- has_many :comments
 
-## rooms テーブル
+## posts テーブル
 
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| first_half_score  | integer    | null: false                    |
+| second_half_score | integer    | null: false                    |
+| total_score       | integer    | null: false                    |
+| golf_course       | string     | null: false                    |
+| date              | date       | null: false                    |
+| user              | references | null: false, foreign_key: true |
 
 ### Association
 
-- has_many :room_users
-- has_many :users, through: room_users
-- has_many :messages
+- belongs_to :user
+- has_many :comments
 
-## room_users テーブル
+## comments テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
+| post   | references | null: false, foreign_key: true |
+| text   | string     | null: false                    |
 
 ### Association
 
-- belongs_to :room
 - belongs_to :user
-
-## messages テーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | string     |                                |
-| user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
+- belongs_to :post
