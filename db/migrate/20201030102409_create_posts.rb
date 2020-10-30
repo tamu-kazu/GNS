@@ -6,7 +6,8 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.integer :total_score,       null: false
       t.string :golf_course,        null: false
       t.date :date,                 null: false
-      t.timestamps
+      t.references :user,     foreign_key: true
+      t.timestamps  
     end
   end
 end
