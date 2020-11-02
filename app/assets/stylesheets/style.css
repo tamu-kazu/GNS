@@ -17,9 +17,10 @@ div {
 
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-  color: #3b4043;
+  color: #000000;
   background-image: url("golf.jpg");
-  background-size:contain;
+  background-size   : 100% 100%;
+  font-weight:  bold;
 }
 
 li {
@@ -274,7 +275,7 @@ a {
 /* フッター */
 
 .footer {
-  background-color: #999;
+  background-color: rgb(0, 0, 0);
   padding: 10px 0;
 }
 .copyright {
@@ -326,4 +327,24 @@ a {
     width: 100%;
   }
 }
-
+  .score{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  .price-text{
+    display: flex;
+    align-items: center;
+  }
+  .price-input{
+    height: 30px;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .price-content{
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
