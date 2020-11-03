@@ -17,6 +17,6 @@
      <span>Total</span>
      <%= post.total_score %>
     </p>
-   <%= link_to post.user.nickname, root_path, class: :card__user %>
+   <%= link_to post.user.nickname, user_path(post.user.id), class: :card__user %>
   </div>
 </div>
