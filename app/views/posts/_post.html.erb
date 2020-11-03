@@ -1,10 +1,22 @@
 <div class="card">
-  <%= link_to image_tag("プロトタイプの画像", class: :card__img ), root_path%>
+  <%= link_to image_tag(post.image, class: :card__img ), root_path%>
   <div class="card__body">
-    <%= link_to "プロトタイプのタイトル", root_path, class: :card__title%>
+   <p class="date">
+    <%= post.date %>
+   </p>
+    <%= link_to post.golf_course, 'http://www.par72.co.jp/sp/gc/', class: :card__title%>
     <p class="card__summary">
-      <%= "プロトタイプのキャッチコピー" %>
+     <span>IN</span>
+      <%= post.first_half_score %>
     </p>
-    <%= link_to "by プロトタイプの投稿者名", root_path, class: :card__user %>
+    <p class="card__summary">
+     <span>OUT</span>
+     <%= post.second_half_score %>
+    </p>
+    <p class="card__summary">
+     <span>Total</span>
+     <%= post.total_score %>
+    </p>
+   <%= link_to post.user.nickname, root_path, class: :card__user %>
   </div>
 </div>
