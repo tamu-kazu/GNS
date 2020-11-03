@@ -33,6 +33,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    if post.destroy
+      render :index
+    end
+  end
 
   private
 
