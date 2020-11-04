@@ -135,6 +135,7 @@ a {
 .page-heading {
   font-size: 30px;
   margin-bottom: 28px;
+  text-align: center;
 }
 .card__wrapper {
   display: flex;
@@ -249,6 +250,7 @@ a {
   border-collapse: collapse;
   margin-bottom: 32px;
   width: 50%;
+  margin: 0 auto 
 }
 .table__col1{
   text-align: left;
@@ -271,6 +273,12 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+.average_score{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
 }
 /* フッター */
 

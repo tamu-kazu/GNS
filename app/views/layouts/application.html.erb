@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
@@ -20,7 +21,7 @@
            <% if user_signed_in? %>
              <div class="nav__right"> 
                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-               <%= link_to "New Proto", new_post_path, class: :nav__btn %>
+               <%= link_to "New Score", new_post_path, class: :nav__btn %>
              </div> 
            <% else %>
             <div class="nav__right">
