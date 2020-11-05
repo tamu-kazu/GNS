@@ -19,6 +19,10 @@
             <th class="table__col1">ゴルフ歴</th>
             <td class="table__col2"><%= @user.golf_history %></td>
           </tr>
+          <tr>
+            <th class="table__col1">マイムービー</th>
+            <td class="table__col2"><%= link_to "ムービー", video_path(@user.videos.ids) %></td>
+          </tr>
         </tbody>
       </table>
       <h2 class="page-heading">

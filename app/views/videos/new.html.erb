@@ -1,0 +1,11 @@
+<div class="main">
+  <div class="inner">
+   <div class="form__wrapper">
+    <%= form_with model: @video, local: true do |form| %>
+      <p>introduction</p><%= form.text_area :introduction %> <br>
+      <p>video</p><%= form.file_field :video %> <br>
+    <%= form.submit %>
+   <% end %>
+   </div>
+ </div>
+</div>
