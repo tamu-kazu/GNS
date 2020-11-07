@@ -4,7 +4,6 @@
       <h2 class="page-heading">
         <%= "〜マイページ〜" %>
       </h2>
-      <%= column_chart @date %>
     <div class="average_score">
       <span>AVERAGE SCORE</span>
       <%= Post.average(:total_score).floor %>
