@@ -8,6 +8,14 @@
        </div>
     <% end %>
     <%# // ログインしているときは上記を表示する %>
+
+    <div class="col-md-3" id="oarai-weather">
+    <div class="card shadow text-center">
+        <h5><div class="card-header">天気予報</div><h5>
+        <div id="weather"></div>
+    </div>
+</div>
+
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
       <%= render partial: 'post', collection: @posts %>
