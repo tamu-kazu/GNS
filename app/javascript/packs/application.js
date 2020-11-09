@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("../score.js");
+//require("../score.js");
 //require("chartkick")
 //require("chart.js")
 
