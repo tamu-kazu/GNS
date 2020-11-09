@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="inner">
+   <div class="form__wrapper">
+   <% @videos.each do |video| %>
+     <% if video.video.attached? %> 
+     <p><%= video.introduction %></p>
+     <video src="<%= rails_blob_path(video.video)%>" type="video/mp4" width="500" height="500" controls></video> 
+     <% end %>
+   <% end %>
+   </div>
+  </div>
+</div>
+
+

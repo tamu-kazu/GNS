@@ -1,4 +1,8 @@
 class VideosController < ApplicationController
+def index
+  @videos = Video.where(user_id:params[:user_id])
+end
+
   def new
     @video = Video.new
   end
@@ -10,7 +14,7 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.find(params[:id])
+    #@video = Video.find(params[:id])
   end
 
   private
