@@ -10,7 +10,7 @@ end
   def create
     @video = Video.new(video_params)
     @video.save
-    redirect_to @video
+    redirect_to action: :index
   end
 
   def show
